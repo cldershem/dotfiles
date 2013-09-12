@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/cldershem/.git-credential-cache'
 let g:netrw_dirhist_2='/home/cldershem/Documents/Development/homelessgaffer.com/hg-Python/venv/lib/python2.7/site-packages'
 let g:netrw_dirhist_3='/home/cldershem/Documents/Development/homelessgaffer.com/hg-Python'
+let g:netrw_dirhist_4='/home/cldershem/Documents/Development/homelessgaffer.com/hg-Python/venv/lib/python2.7/site-packages'

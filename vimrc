@@ -1,3 +1,6 @@
+" leader
+let mapleader=","
+
 " Syntax highlighting
 syntax on
 
@@ -10,9 +13,10 @@ set nu
 
 " Highlight search
 set hlsearch
+set incsearch
 
 " Highlight search off
-:nmap \q :nohlsearch<CR>
+:nmap <leader>q :nohlsearch<CR>
 
 " pathogen (plugins in folders)
 execute pathogen#infect()
