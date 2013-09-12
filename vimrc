@@ -1,5 +1,17 @@
+" supposedly changes stuff based on filetype
+filetype on
+filetype plugin on
+
+autocmd FileType python set commentstring=#\ %s
+
+" fixes colors for dark background
+set background=dark
+
 " leader
 let mapleader=","
+
+" switch between buffers 
+nnoremap <leader><leader> <c-^>
 
 " Syntax highlighting
 syntax on
