@@ -39,6 +39,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " nerd tree
 :nmap nt :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 30
+let g:NERDTreeIgnore = ['\.pyc$']
 
 " closetag
 " :au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
