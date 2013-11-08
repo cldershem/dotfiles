@@ -1,0 +1,10 @@
+#### Movement
+    - "$" goes to End of Line
+#### Yank and Paste
+    - ""*p" pastes clipboard
+#### Find and Replace
+    -":%s/foo/bar/gc" replaces foo with bar file wide with confirmation
+#### Spell check
+    - "]s" goes to next word
+    - "[s" goes to last word
+    - "z=" suggests words
