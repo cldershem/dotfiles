@@ -1,48 +1,39 @@
-[submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "/home/cldershem/.vim/bundle/nerdtree"]
-	path = /home/cldershem/.vim/bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "/home/cldershem/.vim/bundle/html5.vim"]
-	path = /home/cldershem/.vim/bundle/html5.vim
+[submodule "vim/bundle/html5.vim"]
+	path = vim/bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
-[submodule "/home/cldershem/.vim/bundle/jedi-vim"]
-	path = /home/cldershem/.vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
-[submodule "/home/cldershem/.vim/bundle/syntastic"]
-	path = /home/cldershem/.vim/bundle/syntastic
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "/home/cldershem/.vim/bundle/vim-airline"]
-	path = /home/cldershem/.vim/bundle/vim-airline
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "/home/cldershem/.vim/bundle/vim-commentary"]
-	path = /home/cldershem/.vim/bundle/vim-commentary
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "/home/cldershem/.vim/bundle/vim-css3-syntax"]
-	path = /home/cldershem/.vim/bundle/vim-css3-syntax
+[submodule "vim/bundle/vim-css3-syntax"]
+	path = vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
-[submodule "/home/cldershem/.vim/bundle/vim-fugitive"]
-	path = /home/cldershem/.vim/bundle/vim-fugitive
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "/home/cldershem/.vim/bundle/vim-jinja"]
-	path = /home/cldershem/.vim/bundle/vim-jinja
+[submodule "vim/bundle/vim-jinja"]
+	path = vim/bundle/vim-jinja
 	url = git://github.com/mitsuhiko/vim-jinja.git
-[submodule "/home/cldershem/.vim/bundle/vim-less"]
-	path = /home/cldershem/.vim/bundle/vim-less
+[submodule "vim/bundle/vim-less"]
+	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
-[submodule "/home/cldershem/.vim/bundle/vim-sensible"]
-	path = /home/cldershem/.vim/bundle/vim-sensible
+[submodule "vim/bundle/vim-sensible"]
+	path = vim/bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
-[submodule "/home/cldershem/.vim/bundle/vim-virtualenv"]
-	path = /home/cldershem/.vim/bundle/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv
-[submodule "/home/cldershem/.vim/bundle/vundle"]
-	path = /home/cldershem/.vim/bundle/vundle
+[submodule "vim/bundle/vundle"]
+	path = vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
-[submodule "vim/bundle/jedi-vim"]
-	path = vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
-[submodule "vim/bundle/vim-virtualenv"]
-	path = vim/bundle/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "vim/bundle/closetag.vim"]
+	path = vim/bundle/closetag.vim
+	url = https://github.com/vim-scripts/closetag.vim.git
