@@ -1,33 +1,38 @@
 Installation:
 --------------
 ```
-git clone git://github.com/cldershem/dotvim.git ~/.vim
-git clone git://github.com/cldershem/dotfiles ~/.dotfiles
+git clone git://github.com/cldershem/dotfiles.git ~/.dotfiles
 ```
 
 Create symlinks:
 ```
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/.dotfiles/tmux ~/.tmux
 ```
 
 Switch to the ~/.vim directory, and fetch submodules:
 ```
-cd ~/.vim
-git submodule init
-git submodule update
+cd ~/.dotfiles
+git submodule update --init
 ```
 
+Add new plugins to pathogen
 ```
-cd ~/.vim
-git rm --cached ~/.vim/bundle/plugin
-git submodule add git://path.to/plugin
+cd ~/.dotfiles
+git submodule add git://path.to/plugin vim/bundle/plugin
 ```
 
+if trouble
 ```
-git submodule add git://path.to/plugin ~/.vim/bundle/
+git rm --cached ~/vim/bundle/plugin
 ```
+or better yet just rm the plugin and add it properly next time
 
 
 - references
     - http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
+Notes
+- add bashrc
+- add .gitconfig
