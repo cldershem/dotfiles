@@ -19,6 +19,12 @@ cd ~/.dotfiles
 git submodule update --init
 ```
 
+Install flake8
+(in system python, not venv)
+```
+sudo pip install flake8
+```
+
 Use:
 ------
 Add new plugins to pathogen

@@ -106,3 +106,6 @@ fi
 #chromium
 export PATH="$PATH":`pwd`/depot_tools
 umask 022
+
+#tmux
+alias tmux='tmux -2'
