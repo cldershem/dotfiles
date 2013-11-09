@@ -1,7 +1,7 @@
 Installation:
 --------------
 ```
-git clone git://github.com/cldershem/dotfiles.git ~/.dotfiles
+git clone git@github.com/cldershem/dotfiles.git ~/.dotfiles
 ```
 
 Create symlinks:
