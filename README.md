@@ -19,6 +19,8 @@ cd ~/.dotfiles
 git submodule update --init
 ```
 
+Use:
+------
 Add new plugins to pathogen
 ```
 cd ~/.dotfiles
@@ -32,5 +34,6 @@ git rm --cached ~/vim/bundle/plugin
 or better yet just rm the plugin and add it properly next time
 
 
-- references
-    - http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+References
+------------
+- http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
