@@ -9,6 +9,8 @@ Create symlinks:
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/tmux ~/.tmux
+ln -s ~/.dotfiles/bashrc ~/.bashrc
+ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 ```
 
 Switch to the ~/.vim directory, and fetch submodules:
@@ -32,7 +34,3 @@ or better yet just rm the plugin and add it properly next time
 
 - references
     - http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-
-Notes
-- add bashrc
-- add .gitconfig

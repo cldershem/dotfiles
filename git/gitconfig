@@ -1,0 +1,18 @@
+[user]
+	name = Cameron Dershem
+	email = cldershem@gmail.com
+[credential]
+	helper = cache
+[color]
+	ui = auto
+[push]
+	default = simple
+[cola]
+	fontdiff = Ubuntu Mono,10,-1,5,50,0,0,0,0,0
+	tabwidth = 4
+	textwidth = 80
+	linebreak = false
+[gui]
+	editor = vim
+[core]
+	excludesfile = /home/cldershem/.dotfiles/git/gitignore_global
