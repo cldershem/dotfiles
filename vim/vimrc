@@ -1,3 +1,8 @@
+" pathogen (plugins in folders)
+execute pathogen#infect()
+" call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
+
 " supposedly changes stuff based on filetype
 filetype on
 filetype plugin on
@@ -11,7 +16,7 @@ set background=dark
 " leader
 let mapleader=","
 
-" switch between buffers 
+" switch between buffers
 nnoremap <leader><leader> <c-^>
 
 " Syntax highlighting
@@ -31,10 +36,7 @@ set incsearch
 " Highlight search off
 :nmap <leader>q :nohlsearch<CR>
 
-" pathogen (plugins in folders)
-execute pathogen#infect()
-
-" ctrlp 
+" ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " nerd tree
@@ -44,8 +46,8 @@ let g:NERDTreeIgnore = ['\.pyc$']
 
 " closetag
 " :au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
-:let g:closetag_html_style=1
-:source ~/.vim/bundle/closetag.vim
+" :let g:closetag_html_style=1
+" :source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
 " escape key
 :imap jj <Esc>
@@ -89,22 +91,16 @@ autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en_us
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
 
 " vim-airline
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
-" powerline
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-" Always show statusline
-set laststatus=2
+"Always show statusline
+" set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
 " split navigation
-nmap <silent> <c-k> :wincmd k<CR>                                                                                                                       
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
