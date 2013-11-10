@@ -45,7 +45,7 @@ let g:NERDTreeWinSize = 30
 let g:NERDTreeIgnore = ['\.pyc$']
 
 " closetag
-:au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
+" :au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 :let g:closetag_html_style=1
 :source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 

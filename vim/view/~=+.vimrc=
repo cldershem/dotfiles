@@ -112,21 +112,12 @@ setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-<<<<<<< Updated upstream
-let s:l = 72 - ((28 * winheight(0) + 17) / 35)
+let s:l = 50 - ((33 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-72
-normal! 02|
-=======
-let s:l = 83 - ((33 * winheight(0) + 17) / 35)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-83
-normal! 07|
->>>>>>> Stashed changes
+50
+normal! 09|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
