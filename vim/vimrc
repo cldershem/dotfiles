@@ -99,8 +99,15 @@ let g:airline_powerline_fonts = 1
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
+" set splits right and below
+set splitright
+set splitbelow
+
 " split navigation
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" ag, silver searcher, ack-vim
+let g:ackprg = 'ag --nogroup --nocolor --column'

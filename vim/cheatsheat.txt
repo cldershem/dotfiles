@@ -1,10 +1,15 @@
-#### Movement
+Movement
     - "$" goes to End of Line
-#### Yank and Paste
+Yank and Paste
     - ""*p" pastes clipboard
-#### Find and Replace
+Find and Replace
     -":%s/foo/bar/gc" replaces foo with bar file wide with confirmation
-#### Spell check
+Spell check
     - "]s" goes to next word
     - "[s" goes to last word
     - "z=" suggests words
+Splits
+    "CTRL+w r" rotates clockwise
+Sessions
+    mksession
+    source /path/to/session
