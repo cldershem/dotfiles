@@ -1,7 +1,12 @@
 Installation:
 --------------
+Prereqs:
 ```
+sudo apt-get install git, vim, tmux, zsh
 git clone git@github.com:cldershem/dotfiles.git ~/.dotfiles
+```
+```
+git submodule add git://github.com/robbyrussell/oh-my-zsh.git ./zsh/oh-my-zsh
 ```
 
 Create symlinks:
@@ -9,8 +14,10 @@ Create symlinks:
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/tmux ~/.tmux
-ln -s ~/.dotfiles/bashrc ~/.bashrc
+ln -s ~/.dotfiles/bashrc ~/.bashrc 
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
 ```
 
 Switch to the ~/.vim directory, and fetch submodules:
