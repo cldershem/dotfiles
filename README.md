@@ -1,11 +1,8 @@
 Installation:
 --------------
-Prereqs:
 ```
-sudo apt-get install git, vim, tmux, zsh
+sudo apt-get install git vim tmux zsh
 git clone git@github.com:cldershem/dotfiles.git ~/.dotfiles
-```
-```
 git submodule add git://github.com/robbyrussell/oh-my-zsh.git ./zsh/oh-my-zsh
 ```
 
