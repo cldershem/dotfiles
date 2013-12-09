@@ -12,9 +12,6 @@ ZSH_THEME="intheloop"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#tmux
-alias tmux='tmux -2'
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -49,11 +46,15 @@ alias tmux='tmux -2'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git, pip, command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+######################
+# User configuration #
+######################
+# tmux
+alias tmux='tmux -2'
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
