@@ -86,9 +86,10 @@ autocmd filetype tex nnoremap <leader>cne :w<CR>:!rubber --pdf %<CR><CR>
 " LaTeX PDF macro
 autocmd filetype tex nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 
-" spellcheck for LaTeX and txt
+" spellcheck for LaTeX, txt, markdown
 autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en_us
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
+autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_us
 
 " vim-airline
 let g:airline_powerline_fonts = 1
@@ -111,3 +112,6 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 " ag, silver searcher, ack-vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" make md markdown
+au BufRead,BufNewFile *.md set filetype=markdown
