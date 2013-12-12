@@ -125,6 +125,11 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " below be from maximum awesome
+
+" show whitespace
+set list
+set listchars=tab:▸\ ,trail:▫
+
 " ag, silver search stuff
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
