@@ -21,6 +21,7 @@ chsh -s /bin/zsh
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
+ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes 
 ```
 
 Create symlinks:
