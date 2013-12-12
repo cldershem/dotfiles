@@ -56,6 +56,14 @@ source $ZSH/oh-my-zsh.sh
 # tmux
 alias tmux='tmux -2'
 
+# # powerline
+# if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+#     source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# fi
+
+# # turn of virtualenv display (conflicts with powerline)
+# VIRTUAL_ENV_DISABLE_PROMPT=true
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 

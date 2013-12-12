@@ -5,6 +5,14 @@ sudo apt-get install git vim tmux zsh
 git clone git@github.com:cldershem/dotfiles.git ~/.dotfiles
 ```
 
+If powerline:
+```
+pip install --user git+git://github.com/Lokaltog/powerline
+ln -s ~/.dotfiles/powerline ~/.config/powerline
+```
+- possibly need some fonts:
+    - https://powerline.readthedocs.org/en/latest/installation/linux.html#installation-linux
+
 If zsh:
 ```
 cd ~/.dotfiles
