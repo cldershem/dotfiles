@@ -56,6 +56,7 @@ source $ZSH/oh-my-zsh.sh
 ######################
 # tmux
 alias tmux='tmux -2'
+alias :q='exit'
 
 # # powerline
 # if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then

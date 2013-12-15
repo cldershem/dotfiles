@@ -125,7 +125,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " below be from maximum awesome
-
 " show whitespace
 set list
 set listchars=tab:▸\ ,trail:▫
@@ -147,3 +146,6 @@ set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
     set ttymouse=xterm2
 endif
+
+" if .vim/after/ftplugin/rst.vim is giving problem
+"autocmd FileType rst setlocal shiftwidth=2 tabstop=2
