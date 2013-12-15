@@ -124,7 +124,26 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " make md markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" below be from maximum awesome
+" if .vim/after/ftplugin/rst.vim is giving problem
+"autocmd FileType rst setlocal shiftwidth=2 tabstop=2
+
+" mark 80 chars
+let &colorcolumn=81
+
+" gundo remap
+nnoremap <F5> :GundoToggle<CR>
+
+" highlight current line
+" :set cursorline
+
+" persistent undo
+set undofile
+set undodir=~/.vim/vim-undo
+
+"""""""""""""""""""""""""""""""""
+" below be from maximum awesome "
+"""""""""""""""""""""""""""""""""
+
 " show whitespace
 set list
 set listchars=tab:▸\ ,trail:▫
@@ -147,5 +166,5 @@ if exists('$TMUX')  " Support resizing in tmux
     set ttymouse=xterm2
 endif
 
-" if .vim/after/ftplugin/rst.vim is giving problem
-"autocmd FileType rst setlocal shiftwidth=2 tabstop=2
+" reload files when changed on disk, i.e. via `git checkout`
+set autoread
