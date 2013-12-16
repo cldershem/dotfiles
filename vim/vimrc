@@ -129,6 +129,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " mark 80 chars
 let &colorcolumn=81
+hi ColorColumn ctermbg=darkgrey
 
 " gundo remap
 nnoremap <F5> :GundoToggle<CR>

@@ -58,6 +58,10 @@ source $ZSH/oh-my-zsh.sh
 alias tmux='tmux -2'
 alias :q='exit'
 
+# set vi mode
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+
 # # powerline
 # if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 #     source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
