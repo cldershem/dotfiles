@@ -141,6 +141,10 @@ nnoremap <F5> :GundoToggle<CR>
 set undofile
 set undodir=~/.vim/vim-undo
 
+" keeps *.swp out of working dir
+set backupdir=~/.vim/vim-tmp
+set directory=~/.vim/vim-tmp
+
 """""""""""""""""""""""""""""""""
 " below be from maximum awesome "
 """""""""""""""""""""""""""""""""
