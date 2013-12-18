@@ -128,7 +128,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "autocmd FileType rst setlocal shiftwidth=2 tabstop=2
 
 " mark 80 chars
-let &colorcolumn=81
+let &colorcolumn=80
 hi ColorColumn ctermbg=darkgrey
 
 " gundo remap
