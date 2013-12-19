@@ -145,6 +145,9 @@ set undodir=~/.vim/vim-undo
 set backupdir=~/.vim/vim-tmp
 set directory=~/.vim/vim-tmp
 
+" abbrevations
+iab #! #!/usr/bin/env python
+
 """""""""""""""""""""""""""""""""
 " below be from maximum awesome "
 """""""""""""""""""""""""""""""""
