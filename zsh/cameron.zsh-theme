@@ -31,9 +31,9 @@ ZSH_THEME_GIT_PROMPT_PREFIX="${my_grey}(${my_pink}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="${my_grey}) ${my_yellow}±%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="${my_grey})"
-ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="${my_magenta}↓%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="${my_magenta}↑%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="${my_magenta}↕%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="${my_yellow}↓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="${my_yellow}↑%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="${my_yellow}↕%{$reset_color%}"
 MODE_INDICATOR="--NORMAL--"
 
 PROMPT='
