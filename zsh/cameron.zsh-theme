@@ -7,10 +7,11 @@ local my_green="$FG[034]"
 local my_grey="$fg_bold[grey]"
 local my_yellow="$fg[yellow]"
 local my_magenta="$fg_bold[magenta]"
+local my_red="$fg[red]"
 
 local host_color="${my_green}"
 if [ -n "$SSH_CLIENT" ]; then
-  local host_color="red"
+  local host_color="${my_red}"
 fi
 
 function venv_info {
