@@ -58,7 +58,7 @@ def get_submodules():
 
 
 def mv_old_dots():
-    command = 'mkdir ~/.dotfiles.old'
+    command = 'mkdir {}.dotfiles.old'.format(home_dir)
     subprocess.call(command.split())
 
     for dot in dots:
