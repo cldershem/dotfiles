@@ -40,4 +40,5 @@ PROMPT='
 ${pipe_top}${user_host} ${current_dir} $(git_prompt_info) $(git_remote_status)
 ${pipe_bottom}${prompt_indicator} '
 
-RPROMPT='${return_status} $(vi_mode_prompt_info) $(venv_info)'
+# RPROMPT='${return_status} $(vi_mode_prompt_info) $(venv_info)'
+RPROMPT='${return_status} $(venv_info)'

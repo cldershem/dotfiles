@@ -86,6 +86,9 @@ autocmd filetype tex nnoremap <leader>cne :w<CR>:!rubber --pdf %<CR><CR>
 " LaTeX PDF macro
 autocmd filetype tex nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 
+" set tabstops for tex
+autocmd FileType tex setlocal shiftwidth=2 tabstop=2
+
 " spellcheck for LaTeX, txt, markdown
 autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en_us
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
@@ -173,3 +176,6 @@ endif
 
 " reload files when changed on disk, i.e. via `git checkout`
 set autoread
+
+" allows saving of files you don't have permssion to edit
+cmap w!! %!sudo tee > /dev/null %
