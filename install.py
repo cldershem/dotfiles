@@ -75,6 +75,7 @@ def mv_old_dots():
 
 def ln_new_dots():
     for dot in new_dots:
+        dot = dot.replace('~/', home_dir)
         command = 'ln -s {}'.format(dot)
         subprocess.call(command.split())
         print("Linked {}").format(dot)
