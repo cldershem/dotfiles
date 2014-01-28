@@ -32,8 +32,7 @@ apt_depends = [
     'git',
     'vim',
     'tmux',
-    'zsh',
-    'ipython'
+    'zsh'
     ]
 
 pip_depends = [
@@ -76,7 +75,7 @@ def mv_old_dots():
 
 def ln_new_dots():
     for dot in new_dots:
-        command = 'ln -s {}'.format(new_dots.replace('~/', home_dir))
+        command = 'ln -s {}'.format(dot)
         subprocess.call(command.split())
         print("Linked {}").format(dot)
 
