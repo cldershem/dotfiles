@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import subprocess
+import os.path
 
+
+home_dir = '/home/cldershem/'
 
 dots = [
     'zshrc',
@@ -59,8 +62,9 @@ def mv_old_dots():
     subprocess.call(command.split())
 
     for dot in dots:
-        dot = '~/.{}'.format(dot)
-        if dot.exists():
+        old_dot = ('{}{}').format(home_dir, dot)
+        if os.path.exists(old_dot):
+            dot = '~/.{}'.format(dot)
             command = 'mv {} ~/.dotfiles.old'.format(dot)
             subprocess.call(command.split())
             print("Moved {}").format(dot)
