@@ -9,7 +9,7 @@ dots = [
     'zshrc',
     'vim',
     'vimrc',
-    'tmux',
+    # 'tmux',
     'tmux.conf',
     'bashrc',
     'gitconfig',
@@ -59,17 +59,22 @@ def get_submodules():
 
 def mv_old_dots():
     command = 'mkdir {}.dotfiles.old'.format(home_dir)
-    subprocess.call(command.split())
+    # subprocess.call(command.split())
 
     for dot in dots:
         old_dot = ('{}.{}').format(home_dir, dot)
+        print old_dot
         if os.path.exists(old_dot):
-            dot = '{}.{}'.format(home_dir, dot)
+            if os.path.isfile(old_dot):
+                dot = '{}.{}'.format(home_dir, dot)
+            else:
+                dot = '{}.{}/'.format(home_dir, dot)
             command = 'mv {} {}.dotfiles.old'.format(dot, home_dir)
-            subprocess.call(command.split())
+            print command
+            # subprocess.call(command.split())
             print("Moved {}").format(dot)
         else:
-            print("{} doesn't exist.").format(dot)
+            print("{} doesn't exist.").format(old_dot)
     print("You can rm ~/.dotfiles.old when you're good.")
 
 
