@@ -47,7 +47,7 @@ def get_dependancies():
         subprocess.call(command.split())
         print("Installed {}").format(depend)
     for depend in pip_depends:
-        command = 'pip install {}'.format(depend)
+        command = 'sudo pip install {}'.format(depend)
         print("Installed {}").format(depend)
 
 
