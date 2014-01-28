@@ -21,7 +21,7 @@ new_dots = [
     'vim ~/.vim',
     'vim/vimrc ~/.vimrc',
     # 'tmux ~/.tmux',
-    'basrc ~/.bashrc',
+    'bashrc ~/.bashrc',
     'git/gitconfig ~/.gitconfig',
     'zsh/zshrc ~/.zshrc',
     'zsh/oh-my-zsh ~/.oh-my-zsh',
