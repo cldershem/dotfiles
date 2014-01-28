@@ -1,27 +1,28 @@
 Installation:
 --------------
 ```
+git clone git@github.com:cldershem/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+python ./install.py
+```
+```
 sudo apt-get install git vim tmux zsh
+pip install virtualenvwrapper flake8
 git clone git@github.com:cldershem/dotfiles.git ~/.dotfiles
 ```
 
-If powerline:
-```
-pip install --user git+git://github.com/Lokaltog/powerline
-ln -s ~/.dotfiles/powerline ~/.config/powerline
-```
-- possibly need some fonts:
+- possibly need some fonts for vim-airline:
     - https://powerline.readthedocs.org/en/latest/installation/linux.html#installation-linux
 
-If zsh:
+Change sh to zsh:
+```
+chsh -s /bin/zsh
+```
+
+Fetch submodules:
 ```
 cd ~/.dotfiles
-git submodule add git://github.com/robbyrussell/oh-my-zsh.git ./zsh/oh-my-zsh
-chsh -s /bin/zsh
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
-ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes 
+git submodule update --init
 ```
 
 Create symlinks:
@@ -30,18 +31,10 @@ ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/tmux ~/.tmux
 ln -s ~/.dotfiles/bashrc ~/.bashrc 
-```
-
-Switch to the ~/.vim directory, and fetch submodules:
-```
-cd ~/.dotfiles
-git submodule update --init
-```
-
-Install flake8
-(in system python, not venv)
-```
-sudo pip install flake8
+ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
+ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
 ```
 
 Use:
