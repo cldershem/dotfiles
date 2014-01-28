@@ -64,8 +64,8 @@ def mv_old_dots():
     for dot in dots:
         old_dot = ('{}{}').format(home_dir, dot)
         if os.path.exists(old_dot):
-            dot = '~/.{}'.format(dot)
-            command = 'mv {} ~/.dotfiles.old'.format(dot)
+            dot = '{}.{}'.format(home_dir, dot)
+            command = 'mv {} {}.dotfiles.old'.format(dot, home_dir)
             subprocess.call(command.split())
             print("Moved {}").format(dot)
         else:
