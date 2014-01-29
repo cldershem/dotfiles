@@ -25,7 +25,7 @@ new_dots = [
     'git/gitconfig ~/.gitconfig',
     'zsh/zshrc ~/.zshrc',
     'zsh/oh-my-zsh ~/.oh-my-zsh',
-    'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes'
+    # 'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes'
     ]
 
 apt_depends = [
