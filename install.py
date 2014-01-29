@@ -58,19 +58,24 @@ def get_submodules():
 
 
 def mv_old_dots():
-    command = 'mkdir {}.dotfiles.old'.format(home_dir)
-    subprocess.call(command.split())
+    old_dir = '{}.dotfiles.old/'.format(home_dir)
+    if os.path.exists(old_dir):
+        command = 'sudo rm -r {}'.format(old_dir)
+        # subprocess.call(command.split())
+    command = 'mkdir {}'.format(old_dir)
+    # subprocess.call(command.split())
 
     for dot in dots:
         old_dot = ('{}.{}').format(home_dir, dot)
+        print old_dot
         if os.path.exists(old_dot):
-            # if os.path.isfile(old_dot):
-                # dot = '{}.{}'.format(home_dir, dot)
-            dot = '{}.{}'.format(home_dir, dot)
-            # else:
-                # dot = '{}.{}/'.format(home_dir, dot)
-            command = 'mv {} {}'.format(dot, home_dir + '.dotfiles.old/')
-            subprocess.call(command.split())
+    #         # if os.path.isfile(old_dot):
+    #             # dot = '{}.{}'.format(home_dir, dot)
+    #         # else:
+    #             # dot = '{}.{}/'.format(home_dir, dot)
+            command = 'mv {} {}'.format(old_dot, old_dir)
+            print command
+    #         subprocess.call(command.split())
             print("Moved {}").format(dot)
         else:
             print("{} doesn't exist.").format(old_dot)
