@@ -86,8 +86,9 @@ autocmd filetype tex nnoremap <leader>cne :w<CR>:!rubber --pdf %<CR><CR>
 " LaTeX PDF macro
 autocmd filetype tex nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 
-" set tabstops for tex
+" set tabstops for filetypes
 autocmd FileType tex setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " spellcheck for LaTeX, txt, markdown
 autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en_us
