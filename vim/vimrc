@@ -17,7 +17,7 @@ set background=dark
 let mapleader=","
 
 " switch between buffers
-nnoremap <leader><leader> <c-^>
+nnoremap <leader><leader> <c-^
 
 " Syntax highlighting
 syntax on
@@ -27,7 +27,8 @@ filetype indent on
 set autoindent
 
 " line numbers
-set nu
+set relativenumber
+set number
 
 " Highlight search
 set hlsearch
