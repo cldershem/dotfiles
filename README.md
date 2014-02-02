@@ -8,15 +8,6 @@ python ./install.py
 - possibly need some fonts for vim-airline:
     - https://powerline.readthedocs.org/en/latest/installation/linux.html#installation-linux
 
-YouCompleteMe
--------------
-```
-cd ~/.vim/bundle/YouCompleteMe
-git submodule --init --recursive (er something)
-./install.sh
-```
-may need to set flags for C languages
-
 Use:
 ------
 Add new plugins to pathogen

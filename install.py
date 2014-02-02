@@ -97,9 +97,23 @@ def update_sh():
     print("Changed sh to zsh")
 
 
+def install_ycm():
+    # possibly need some extra swap for this
+    # command = 'sudo apt-get install build-essential cmake python-dev'
+    # subprocess.call(command.split())
+    # command = 'cd ~/.vim/bundle/YouCompleteMe'
+    # subprocess.call(command.split())
+    # command = 'git submodule --init --recursive'
+    # subprocess.call(command.split())
+    # command = './install.sh'
+    # subprocess.call(command.split())
+    pass
+
+
 if __name__ == '__main__':
     get_dependancies()
     get_submodules()
+    install_ycm()
     mv_old_dots()
     ln_new_dots()
     update_sh()
