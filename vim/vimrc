@@ -107,7 +107,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " powerline
 " set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
-"Always show statusline
+" Always show statusline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
@@ -151,7 +151,7 @@ set backupdir=~/.vim/vim-tmp
 set directory=~/.vim/vim-tmp
 
 """""""""""""""""""""""""""""""""
-" below be from maximum awesome "
+" maximum awesome "
 """""""""""""""""""""""""""""""""
 
 " show whitespace
@@ -179,5 +179,11 @@ endif
 " reload files when changed on disk, i.e. via `git checkout`
 set autoread
 
+""" end maximum awesome
+
 " allows saving of files you don't have permssion to edit
 cmap w!! %!sudo tee > /dev/null %
+
+" wildmode stuffs
+" set wildmode=longest,list:longest
+" set completeopt=menu,preview

@@ -18,7 +18,7 @@ git submodule add git://path.to/plugin vim/bundle/plugin
 
 if trouble
 ```
-git rm --cached ~/vim/bundle/plugin
+git rm --cached ~/.vim/bundle/plugin
 ```
 or better yet just rm the plugin and add it properly next time
 
