@@ -58,6 +58,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" set tabstops for filetypes
+autocmd FileType tex setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
 " no line wrap
 set nowrap
 
@@ -86,10 +91,6 @@ autocmd filetype tex nnoremap <leader>cne :w<CR>:!rubber --pdf %<CR><CR>
 
 " LaTeX PDF macro
 autocmd filetype tex nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
-
-" set tabstops for filetypes
-autocmd FileType tex setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " spellcheck for LaTeX, txt, markdown
 autocmd BufNewFile,BufRead *.tex setlocal spell spelllang=en_us
@@ -185,24 +186,6 @@ set autoread
 cmap w!! %!sudo tee > /dev/null %
 
 " ultisnip/ycm remapping
-" function! g:UltiSnips_Complete()
-"     call UltiSnips_ExpandSnippet()
-"     if g:ulti_expand_res == 0
-"         if pumvisible()
-"             return "\<C-n>"
-"         else
-"             call UltiSnips_JumpForwards()
-"             if g:ulti_jump_forwards_res == 0
-"                 return "\<TAB>"
-"             endif
-"         endif
-"     endif
-"     return ""
-" endfunction
-" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsListSnippets="<c-e>"
-
 function! g:UltiSnips_Complete()
     call UltiSnips_ExpandSnippet()
     if g:ulti_expand_res == 0
