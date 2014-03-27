@@ -121,10 +121,10 @@ set splitright
 set splitbelow
 
 " split navigation
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+" nmap <silent> <c-k> :wincmd k<CR>
+" nmap <silent> <c-j> :wincmd j<CR>
+" nmap <silent> <c-h> :wincmd h<CR>
+" nmap <silent> <c-l> :wincmd l<CR>
 
 " ag, silver searcher, ack-vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -153,9 +153,9 @@ set undodir=~/.vim/vim-undo
 set backupdir=~/.vim/vim-tmp
 set directory=~/.vim/vim-tmp
 
-"""""""""""""""""""""""""""""""""
+"""""""""""""""""""
 " maximum awesome "
-"""""""""""""""""""""""""""""""""
+"""""""""""""""""""
 
 " show whitespace
 set list
@@ -182,7 +182,9 @@ endif
 " reload files when changed on disk, i.e. via `git checkout`
 set autoread
 
-""" end maximum awesome
+"""""""""""""""""""""
+"end maximum awesome"
+"""""""""""""""""""""
 
 " allows saving of files you don't have permssion to edit
 cmap w!! %!sudo tee > /dev/null %
@@ -205,3 +207,4 @@ endfunction
 autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <c-r>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
+let g:ycm_autoclose_preview_window_after_insertion=1
