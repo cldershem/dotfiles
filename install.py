@@ -3,6 +3,16 @@ import subprocess
 import os.path
 
 
+# TODO
+# powerline fonts
+# symlink zsh theme
+# install ycm
+# git submodule init recursive
+# python-dev
+# cmake
+# symlink tmux.conf
+
+
 home_dir = '/home/cldershem/'
 
 dots = [
