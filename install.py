@@ -5,12 +5,6 @@ import os.path
 
 # TODO
 # powerline fonts
-# symlink zsh theme
-# install ycm
-# git submodule init recursive
-# python-dev
-# cmake
-# symlink tmux.conf
 
 
 home_dir = '/home/cldershem/'
@@ -30,12 +24,12 @@ dots = [
 new_dots = [
     'vim ~/.vim',
     'vim/vimrc ~/.vimrc',
-    # 'tmux ~/.tmux',
+    'tmux/tmux.conf ~/.tmux.conf',
     'bashrc ~/.bashrc',
     'git/gitconfig ~/.gitconfig',
     'zsh/zshrc ~/.zshrc',
     'zsh/oh-my-zsh ~/.oh-my-zsh',
-    # 'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes'
+    'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes'
     ]
 
 apt_depends = [
@@ -43,6 +37,10 @@ apt_depends = [
     'vim',
     'tmux',
     'zsh'
+    'python-pip'
+    'python-dev'
+    'build-essentials'
+    'cmake'
     ]
 
 pip_depends = [
@@ -109,15 +107,12 @@ def update_sh():
 
 def install_ycm():
     # possibly need some extra swap for this
-    # command = 'sudo apt-get install build-essential cmake python-dev'
-    # subprocess.call(command.split())
-    # command = 'cd ~/.vim/bundle/YouCompleteMe'
-    # subprocess.call(command.split())
-    # command = 'git submodule --init --recursive'
-    # subprocess.call(command.split())
-    # command = './install.sh'
-    # subprocess.call(command.split())
-    pass
+    command = 'cd ~/.vim/bundle/YouCompleteMe'
+    subprocess.call(command.split())
+    command = 'git submodule --init --recursive'
+    subprocess.call(command.split())
+    command = './install.sh'
+    subprocess.call(command.split())
 
 
 if __name__ == '__main__':
