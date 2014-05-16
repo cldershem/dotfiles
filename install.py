@@ -41,6 +41,7 @@ apt_depends = [
     'python-dev'
     'build-essentials'
     'cmake'
+    'silversearcher-ag'
     ]
 
 pip_depends = [
