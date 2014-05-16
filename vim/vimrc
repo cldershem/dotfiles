@@ -153,6 +153,12 @@ set undodir=~/.vim/vim-undo
 set backupdir=~/.vim/vim-tmp
 set directory=~/.vim/vim-tmp
 
+" set preview color
+:highlight Pmenu ctermbg=darkmagenta
+:highlight Pmenu ctermfg=lightgrey
+:highlight PmenuSel ctermbg=grey
+:highlight PmenuSel ctermfg=darkgrey
+
 """""""""""""""""""
 " maximum awesome "
 """""""""""""""""""
