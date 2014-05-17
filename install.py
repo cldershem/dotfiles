@@ -18,7 +18,7 @@ dots = [
     'bashrc',
     'gitconfig',
     'zshrc',
-    'oh-my-zsh'
+    'oh-my-zsh',
     ]
 
 new_dots = [
@@ -29,19 +29,19 @@ new_dots = [
     'git/gitconfig ~/.gitconfig',
     'zsh/zshrc ~/.zshrc',
     'zsh/oh-my-zsh ~/.oh-my-zsh',
-    'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes'
+    'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes',
     ]
 
 apt_depends = [
     'git',
     'vim',
     'tmux',
-    'zsh'
-    'python-pip'
-    'python-dev'
-    'build-essentials'
-    'cmake'
-    'silversearcher-ag'
+    'zsh',
+    'python-pip',
+    'python-dev',
+    'build-essential',
+    'cmake',
+    'silversearcher-ag',
     ]
 
 pip_depends = [
@@ -79,10 +79,10 @@ def mv_old_dots():
     for dot in dots:
         old_dot = ('{}.{}').format(home_dir, dot)
         if os.path.exists(old_dot):
-    #         # if os.path.isfile(old_dot):
-    #             # dot = '{}.{}'.format(home_dir, dot)
-    #         # else:
-    #             # dot = '{}.{}/'.format(home_dir, dot)
+            # if os.path.isfile(old_dot):
+                # dot = '{}.{}'.format(home_dir, dot)
+            # else:
+                # dot = '{}.{}/'.format(home_dir, dot)
             command = 'mv {} {}'.format(old_dot, old_dir)
             subprocess.call(command.split())
             print("Moved {}").format(dot)
@@ -110,16 +110,16 @@ def install_ycm():
     # possibly need some extra swap for this
     command = 'cd ~/.vim/bundle/YouCompleteMe'
     subprocess.call(command.split())
-    command = 'git submodule --init --recursive'
+    command = 'git submodule update --init --recursive'
     subprocess.call(command.split())
-    command = './install.sh'
+    command = './install.sh --clang-completer'
     subprocess.call(command.split())
 
 
 if __name__ == '__main__':
     get_dependancies()
     get_submodules()
-    install_ycm()
     mv_old_dots()
     ln_new_dots()
+    # install_ycm()
     update_sh()
