@@ -40,22 +40,22 @@ mv-dots:
 	mkdir -p ~/.olddots
 	if [ -d "~/.vim" ]; then \
 		mv ~/.vim ~/.olddots \
-	fi
+	fi;
 	if [ -a "~/.vimrc" ]; then \
 		mv ~/.vimrc ~/.olddots \
-	fi
+	fi;
 	if [ -a "~/.tmux.conf" ]; then \
 		mv ~/.tmux.conf ~/.olddots \
-	fi
+	fi;
 	if [ -a "~/.gitconfig" ]; then \
 		mv ~/.gitconfig ~/.olddots \
-	fi
+	fi;
 	if [ -a "~/.zshrc" ]; then \
 		mv ~/.zshrc ~/.olddots \
-	fi
+	fi;
 	if [ -d "~/.oh-my-zsh" ]; then \
 		mv ~/.oh-my-zsh ~/.olddots \
-	fi
+	fi;
 
 ln-dots:
 	ln -s ./vim ~/.vim
