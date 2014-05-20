@@ -53,16 +53,19 @@ mv-dots:
 	if [ -a "~/.zshrc" ]; then \
 		mv ~/.zshrc ~/.olddots/.zshrc; \
 		fi
+	if [ -a "~/.bashrc" ]; then \
+		mv ~/.bashrc ~/.olddots/.bashrc; \
+		fi
 	if [ -d "~/.oh-my-zsh" ]; then \
 		mv ~/.oh-my-zsh ~/.olddots/.oh-my-zsh; \
 		fi
 
 ln-dots:
-	ln -s ./vim ~/.vim
-	ln -s ./vim/vimrc ~/.vimrc
-	ln -s ./tmux/tmux.conf ~/.tmux.conf
-	ln -s ./bashrc ~/.bashrc
-	ln -s ./git/gitconfig ~/.gitconfig
-	ln -s ./zsh/zshrc ~/.zshrc
-	ln -s ./zsh/oh-my-zsh ~/.oh-my-zsh
-	ln -s ./zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
+	ln -s ~/.dotfiles/vim ~/.vim
+	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+	ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+	ln -s ~/.dotfiles/bashrc ~/.bashrc
+	ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+	ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+	ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
+	ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
