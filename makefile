@@ -10,7 +10,7 @@ apt-deps:
 	sudo apt-get install zsh
 	sudo apt-get install python-pip
 	sudo apt-get install python-dev
-	sudo apt-get install silversearcher-fg
+	sudo apt-get install silversearcher-ag
 
 pip-deps:
 	sudo pip install virtualenvwrapper
@@ -30,7 +30,7 @@ install-fonts:
 	wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
 	wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 	mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/
-	fc-cache -vf ~/.fonts
+	# fc-cache -vf ~/.fonts
 	mkdir -p ~/.config/fontconfig/conf.d/  && mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 update-sh:

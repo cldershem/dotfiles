@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # tmux
 alias tmux='tmux -2'
 alias :q='exit'
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 # set vi mode
 bindkey -v
