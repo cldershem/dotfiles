@@ -36,6 +36,15 @@ install-fonts:
 update-sh:
 	chsh -s /bin/zsh
 
+mv-dots:
+	mkdir -p ~/.olddots
+	mv ~/.vim ~/.olddots
+	mv ~/.vimrc ~/.olddots
+	mv ~/.tmux.conf ~/.olddots
+	mv ~/.gitconfig ~/.olddots
+	mv ~/.zshrc ~/.olddots
+	mv ~/.oh-my-zsh ~/.oh-my-zsh
+
 ln-dots:
 	ln -s ./vim ~/.vim
 	ln -s ./vim/vimrc ~/.vimrc
