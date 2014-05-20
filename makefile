@@ -1,5 +1,5 @@
 install: apt-deps pip-deps get-submodules \
-	update-sh ln-dots install-fonts install-ycm
+	update-sh mv-dots ln-dots install-fonts install-ycm
 
 
 apt-deps:
