@@ -10,7 +10,7 @@ apt-deps:
 	sudo apt-get install zsh
 	sudo apt-get install python-pip
 	sudo apt-get install python-dev
-	sudo apt-get install silversearcher-ag
+	sudo apt-get install silversearcher-fg
 
 pip-deps:
 	sudo pip install virtualenvwrapper
@@ -41,19 +41,19 @@ mv-dots:
 	if [ -d "~/.vim" ]; then \
 		mv ~/.vim ~/.olddots/.vim; \
 		fi
-	if [ -a "~/.vimrc" ]; then \
+	if [ -f "~/.vimrc" ]; then \
 		mv ~/.vimrc ~/.olddots/.vimrc; \
 		fi
-	if [ -a "~/.tmux.conf" ]; then \
+	if [ -f "~/.tmux.conf" ]; then \
 		mv ~/.tmux.conf ~/.olddots/.tmux.conf; \
 		fi
-	if [ -a "~/.gitconfig" ]; then \
+	if [ -f "~/.gitconfig" ]; then \
 		mv ~/.gitconfig ~/.olddots/.gitconfig; \
 		fi
-	if [ -a "~/.zshrc" ]; then \
+	if [ -f "~/.zshrc" ]; then \
 		mv ~/.zshrc ~/.olddots/.zshrc; \
 		fi
-	if [ -a "~/.bashrc" ]; then \
+	if [ -f "~/.bashrc" ]; then \
 		mv ~/.bashrc ~/.olddots/.bashrc; \
 		fi
 	if [ -d "~/.oh-my-zsh" ]; then \
