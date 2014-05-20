@@ -3,17 +3,12 @@ import subprocess
 import os.path
 
 
-# TODO
-# powerline fonts
-
-
 home_dir = '/home/cldershem/'
 
 dots = [
     'zshrc',
     'vim',
     'vimrc',
-    # 'tmux',
     'tmux.conf',
     'bashrc',
     'gitconfig',
@@ -42,6 +37,7 @@ apt_depends = [
     'build-essential',
     'cmake',
     'silversearcher-ag',
+    'virtualenvwrapper'
     ]
 
 pip_depends = [
@@ -107,13 +103,30 @@ def update_sh():
 
 
 def install_ycm():
-    # possibly need some extra swap for this
-    command = 'cd ~/.vim/bundle/YouCompleteMe'
-    subprocess.call(command.split())
+    old_dir = os.getcwd()
+    os.chdir(r'./vim/bundle/YouCompleteMe')
+    subprocess.call(['pwd'])
     command = 'git submodule update --init --recursive'
     subprocess.call(command.split())
     command = './install.sh --clang-completer'
     subprocess.call(command.split())
+    os.chdir(old_dir)
+    print("Installed YCM")
+
+
+def install_fonts():
+    command = ('wget https://github.com/Lokaltog/powerline/raw/develop/font/' +
+               'PowerlineSymbols.otf https://github.com/Lokaltog/powerline/' +
+               'raw/develop/font/10-powerline-symbols.conf')
+    subprocess.call(command.split())
+    command = 'mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/'
+    subprocess.call(command.split())
+    command = 'fc-cache -vf ~/.fonts'
+    subprocess.call(command.split())
+    command = ('mkdir -p ~/.config/fontconfig/conf.d/ && ' +
+               'mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/')
+    subprocess.call(command.split())
+    print("Installed Powerline fonts")
 
 
 if __name__ == '__main__':
@@ -121,5 +134,6 @@ if __name__ == '__main__':
     get_submodules()
     mv_old_dots()
     ln_new_dots()
-    # install_ycm()
+    install_fonts()
     update_sh()
+    install_ycm()
