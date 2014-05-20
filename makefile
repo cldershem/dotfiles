@@ -1,5 +1,5 @@
-install: apt-deps pip-deps install-ycm get-submodules \
-	install=fonts update-sh ln-dots
+install: apt-deps pip-deps get-submodules \
+	install=fonts update-sh ln-dots install-ycm
 
 
 apt-deps:
@@ -15,7 +15,7 @@ pip-deps:
 	pip install virtualenvwrapper
 	pip install flake8
 
-install-ycm:
+install-ycm: get-submodules
 	apt-get install build-essential
 	apt-get install cmake
 	cd ~/.vim/bundle/YouCompleteMe && \
