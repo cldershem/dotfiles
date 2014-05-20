@@ -39,22 +39,22 @@ update-sh:
 mv-dots:
 	mkdir -p ~/.olddots
 	if [ -d "~/.vim" ]; then \
-		mv ~/.vim ~/.olddots/; \
+		mv ~/.vim ~/.olddots/.vim; \
 		fi
-	if [ "~/.vimrc" ]; then \
-		mv ~/.vimrc ~/.olddots/; \
+	if [ -a "~/.vimrc" ]; then \
+		mv ~/.vimrc ~/.olddots/.vimrc; \
 		fi
-	if [ "~/.tmux.conf" ]; then \
-		mv ~/.tmux.conf ~/.olddots/; \
+	if [ -a "~/.tmux.conf" ]; then \
+		mv ~/.tmux.conf ~/.olddots/.tmux.conf; \
 		fi
-	if [ "~/.gitconfig" ]; then \
-		mv ~/.gitconfig ~/.olddots/; \
+	if [ -a "~/.gitconfig" ]; then \
+		mv ~/.gitconfig ~/.olddots/.gitconfig; \
 		fi
-	if [ "~/.zshrc" ]; then \
-		mv ~/.zshrc ~/.olddots/; \
+	if [ -a "~/.zshrc" ]; then \
+		mv ~/.zshrc ~/.olddots/.zshrc; \
 		fi
 	if [ -d "~/.oh-my-zsh" ]; then \
-		mv ~/.oh-my-zsh ~/.olddots; \
+		mv ~/.oh-my-zsh ~/.olddots/.oh-my-zsh; \
 		fi
 
 ln-dots:
