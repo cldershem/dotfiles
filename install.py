@@ -120,13 +120,15 @@ def install_fonts():
                'PowerlineSymbols.otf https://github.com/Lokaltog/powerline/' +
                'raw/develop/font/10-powerline-symbols.conf')
     subprocess.call(command.split())
-    command = ('mkdir -p ' + home_dir + '.fonts/ && mv PowerlineSymbols.otf ' +
-               home_dir + '.fonts/')
+    command = 'mkdir -p ' + home_dir + '.fonts/'
+    subprocess.call(command.split())
+    command = 'mv PowerlineSymbols.otf ' + home_dir + '.fonts/'
     subprocess.call(command.split())
     command = 'fc-cache -vf ' + home_dir + '.fonts'
     subprocess.call(command.split())
-    command = ('mkdir -p ' + home_dir + '.config/fontconfig/conf.d/ && ' +
-               'mv 10-powerline-symbols.conf ' + home_dir +
+    command = 'mkdir -p ' + home_dir + '.config/fontconfig/conf.d/'
+    subprocess.call(command.split())
+    command = ('mv 10-powerline-symbols.conf ' + home_dir +
                '.config/fontconfig/conf.d/')
     subprocess.call(command.split())
     print("Installed Powerline fonts")
