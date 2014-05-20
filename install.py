@@ -25,7 +25,7 @@ new_dots = [
     'git/gitconfig ~/.gitconfig',
     'zsh/zshrc ~/.zshrc',
     'zsh/oh-my-zsh ~/.oh-my-zsh',
-    'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes',
+    # 'zsh/cameron.zsh-theme ~/.oh-my-zsh/themes',
     ]
 
 apt_depends = [
@@ -95,6 +95,7 @@ def ln_new_dots():
         command = 'ln -s {}'.format(dot)
         subprocess.call(command.split())
         print("Linked {}").format(dot)
+    command = 'ln -s ./zsh/cameron.zsh-theme ' + home_dir + '.oh-my-zsh/themes'
 
 
 def update_sh():
