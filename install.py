@@ -3,8 +3,8 @@ import subprocess
 import os.path
 
 
-home_dir = '/home/cldershem/'
-home_dir = os.getcwd()
+# home_dir = '/home/cldershem/'
+home_dir = os.getcwd() + '/'
 
 dots = [
     'zshrc',
