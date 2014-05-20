@@ -4,6 +4,7 @@ import os.path
 
 
 home_dir = '/home/cldershem/'
+home_dir = os.getcwd()
 
 dots = [
     'zshrc',
@@ -119,12 +120,14 @@ def install_fonts():
                'PowerlineSymbols.otf https://github.com/Lokaltog/powerline/' +
                'raw/develop/font/10-powerline-symbols.conf')
     subprocess.call(command.split())
-    command = 'mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/'
+    command = ('mkdir -p ' + home_dir + '.fonts/ && mv PowerlineSymbols.otf ' +
+               home_dir + '.fonts/')
     subprocess.call(command.split())
-    command = 'fc-cache -vf ~/.fonts'
+    command = 'fc-cache -vf ' + home_dir + '.fonts'
     subprocess.call(command.split())
-    command = ('mkdir -p ~/.config/fontconfig/conf.d/ && ' +
-               'mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/')
+    command = ('mkdir -p ' + home_dir + '.config/fontconfig/conf.d/ && ' +
+               'mv 10-powerline-symbols.conf ' + home_dir +
+               '.config/fontconfig/conf.d/')
     subprocess.call(command.split())
     print("Installed Powerline fonts")
 
