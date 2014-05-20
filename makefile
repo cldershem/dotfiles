@@ -3,21 +3,22 @@ install: apt-deps pip-deps get-submodules \
 
 
 apt-deps:
-	apt-get install git
-	apt-get install vim
-	apt-get install tmux
-	apt-get install zsh
-	apt-get install python-pip
-	apt-get install python-dev
-	apt-get install silversearcher-ag
+	sudo apt-get install openssh-server
+	sudo apt-get install git
+	sudo apt-get install vim
+	sudo apt-get install tmux
+	sudo apt-get install zsh
+	sudo apt-get install python-pip
+	sudo apt-get install python-dev
+	sudo apt-get install silversearcher-ag
 
 pip-deps:
-	pip install virtualenvwrapper
-	pip install flake8
+	sudo pip install virtualenvwrapper
+	sudo pip install flake8
 
 install-ycm: get-submodules
-	apt-get install build-essential
-	apt-get install cmake
+	sudo apt-get install build-essential
+	sudo apt-get install cmake
 	cd ~/.vim/bundle/YouCompleteMe && \
 		git submodule update --init --recursive && \
 		./install.sh --clang-completer
