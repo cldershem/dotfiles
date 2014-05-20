@@ -43,7 +43,7 @@ mv-dots:
 	mv ~/.tmux.conf ~/.olddots
 	mv ~/.gitconfig ~/.olddots
 	mv ~/.zshrc ~/.olddots
-	mv ~/.oh-my-zsh ~/.oh-my-zsh
+	mv ~/.oh-my-zsh ~/.olddots
 
 ln-dots:
 	ln -s ./vim ~/.vim
