@@ -38,12 +38,24 @@ update-sh:
 
 mv-dots:
 	mkdir -p ~/.olddots
+	if [ -d "~/.vim"]; then
 	mv ~/.vim ~/.olddots
+	fi
+	if [ -a "~/.vimrc"]; then
 	mv ~/.vimrc ~/.olddots
+	fi
+	if [ -a "~/.tmux.conf"]; then
 	mv ~/.tmux.conf ~/.olddots
+	fi
+	if [ -a "~/.gitconfig"]; then
 	mv ~/.gitconfig ~/.olddots
+	fi
+	if [ -a "~/.zshrc"]; then
 	mv ~/.zshrc ~/.olddots
+	fi
+	if [ -d "~/.oh-my-zsh"]; then
 	mv ~/.oh-my-zsh ~/.olddots
+	fi
 
 ln-dots:
 	ln -s ./vim ~/.vim
