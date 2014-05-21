@@ -59,8 +59,6 @@ alias tmux='tmux -2'
 alias :q='exit'
 if [[ ! -n $SSH_CONNECTION ]]; then
     if [ "$TMUX" = "" ]; then tmux; fi
-else
-    export EDITOR='mvim'
 fi
 
 # set vi mode
