@@ -57,7 +57,11 @@ source $ZSH/oh-my-zsh.sh
 # tmux
 alias tmux='tmux -2'
 alias :q='exit'
-# if [ "$TMUX" = "" ]; then tmux; fi
+if [[ ! -n $SSH_CONNECTION ]]; then
+    if [ "$TMUX" = "" ]; then tmux; fi
+else
+    export EDITOR='mvim'
+fi
 
 # set vi mode
 bindkey -v

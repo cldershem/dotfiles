@@ -15,6 +15,10 @@ git submodule add git://path.to/plugin vim/bundle/plugin
 update install.py
 ```
 
+Don't for get to set up your ssh keys for git.
+https://help.github.com/articles/generating-ssh-keys
+May need `eval "$(ssh-agent)"`
+ 
 if trouble
 ```
 git rm --cached ~/.vim/bundle/plugin
