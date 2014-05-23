@@ -11,6 +11,7 @@ apt-deps:
 	sudo apt-get install python-pip
 	sudo apt-get install python-dev
 	sudo apt-get install silversearcher-ag
+	sudo apt-get install ipython
 
 pip-deps:
 	sudo pip install virtualenvwrapper
