@@ -126,8 +126,9 @@ set splitbelow
 " ag, silver searcher, ack-vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" make md markdown
+" change filetypes
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.jinja set filetype=jinja
 
 " if .vim/after/ftplugin/rst.vim is giving problem
 "autocmd FileType rst setlocal shiftwidth=2 tabstop=2

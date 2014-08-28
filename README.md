@@ -6,6 +6,18 @@ cd ~/.dotfiles
 python ./install.py
 ```
 
+??
+install make 
+cd ~/.dotfiles
+make
+
+add swap?
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04
+
+sudo update-alternatives --config editor
+choose vim.basic
+??
+
 Use:
 ------
 Add new plugins to pathogen
