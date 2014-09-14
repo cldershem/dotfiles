@@ -218,6 +218,10 @@ cmap w!! %!sudo tee > /dev/null %
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:ultisnips_python_style="GOOGLE"
+let g:snips_email="cldershem@gmail.com"
+let g:snips_author="Cameron"
+let g:snips_github="github.com/cldershem"
 
 " ycm: turn off question for clang compile flags
 let g:ycm_confirm_extra_conf = 0
