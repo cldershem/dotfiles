@@ -77,6 +77,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 # export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
+# ipython
+# export PYTHONSTARTUP="$HOME/.dotfiles/python/.pythonrc"
+
 # # powerline
 # if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 #     source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
