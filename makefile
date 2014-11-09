@@ -25,14 +25,17 @@ install-ycm: get-submodules
 		./install.sh --clang-completer
 
 get-submodules:
-	git submodule update --init
+	cd ~/.dotfiles && \
+		git submodule update --init
 
 install-fonts:
-	wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
-	wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-	mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/
-	# fc-cache -vf ~/.fonts
-	mkdir -p ~/.config/fontconfig/conf.d/  && mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+	mkdir -p ~/.fonts/ && \
+		wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf \
+		> ~/.fonts/PowerlineSymbols.otf
+	mkdir -p ~/.config/fontconfig/conf.d && \
+		wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf \
+		> ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+	# # fc-cache -vf ~/.fonts
 
 update-sh:
 	chsh -s /bin/zsh
