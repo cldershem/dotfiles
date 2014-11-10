@@ -1,6 +1,3 @@
-install: apt-deps pip-deps get-submodules \
-	update-sh mv-dots ln-dots install-fonts install-ycm
-
 install: install-prereqs install-git install-vim setup-python \
 	install-tmux install-zsh get-submodules install-ycm install-fonts \
 	update-bashrc update-sh
