@@ -31,24 +31,24 @@ install-tmux:
 	sudo apt-get -y install tmux
 	ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
-install-zsh:
+get-submodules:
+	cd ~/.dotfiles && \
+		git submodule update --init
+
+install-zsh: get-submodules
 	sudo apt-get -y install zsh
 	ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 	ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
 
-get-submodules:
-	cd ~/.dotfiles && \
-		git submodule update --init
-
-install-ycm: get-submodules
+install-ycm: install-vim
 	sudo apt-get -y install build-essential
 	sudo apt-get -y install cmake
 	cd ~/.vim/bundle/YouCompleteMe && \
 		git submodule update --init --recursive && \
 		./install.sh --clang-completer
 
-install-fonts:
+install-fonts: install-vim
 	mkdir -p ~/.fonts/ && \
 		wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf \
 		> ~/.fonts/PowerlineSymbols.otf
@@ -57,10 +57,10 @@ install-fonts:
 		> ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 	# # fc-cache -vf ~/.fonts
 
-update-sh:
+update-sh: install-zsh
 	chsh -s /bin/zsh
 
-update-bashrc:
+update-bashrc: update-sh
 	mkdir -p ~/.olddots
 	if [ -f "~/.bashrc" ]; then \
 		mv ~/.bashrc ~/.olddots/.bashrc; \
