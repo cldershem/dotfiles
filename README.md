@@ -93,3 +93,7 @@ or better yet just rm the plugin and add it properly next time
 References
 ------------
 - http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y install git && \
+git clone https://github.com/cldershem/dotfile.git ~/.dotfiles && cd ~/.dotfiles && \
+make

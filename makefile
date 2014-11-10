@@ -19,6 +19,8 @@ install-vim:
 	if [ -f "~/.vimrc" ]; then \
 		mv ~/.vimrc ~/.olddots/.vimrc; \
 		fi
+	mv ~/.dotfiles/vim ~/.vim
+	mv ~/.dotfiles/.vimrc ~/.vimrc
 
 setup-python:
 	sudo apt-get -y install python-dev
