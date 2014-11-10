@@ -41,10 +41,10 @@ install-zsh: get-submodules
 	sudo apt-get -y install zsh
 	ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 	ln -s ~/.dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
-	if [ -f "~/.oh-my-zsh/themes/cameron.zsh-theme" ]; then \
-		mv ~/.oh-my-zsh/themes/cameron.zsh-theme ~/.olddots/cameron.zsh-theme; \
-		fi
-	ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
+	# if [ -f "~/.oh-my-zsh/themes/cameron.zsh-theme" ]; then \
+	# 	mv ~/.oh-my-zsh/themes/cameron.zsh-theme ~/.olddots/cameron.zsh-theme; \
+	# 	fi
+	# ln -s ~/.dotfiles/zsh/cameron.zsh-theme ~/.oh-my-zsh/themes
 
 install-ycm: install-vim
 	sudo apt-get -y install build-essential
