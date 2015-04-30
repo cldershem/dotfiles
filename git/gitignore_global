@@ -177,3 +177,6 @@ DerivedData
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# direnv
+.envrc
