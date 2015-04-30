@@ -58,3 +58,12 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim/bundle/vim-scala"]
+	path = vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "vim/bundle/riv.vim"]
+	path = vim/bundle/riv.vim
+	url = https://github.com/Rykka/riv.vim.git
+[submodule "direnv"]
+	path = direnv
+	url = https://github.com/zimbatm/direnv

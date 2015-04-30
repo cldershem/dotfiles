@@ -47,7 +47,7 @@ ZSH_THEME="cameron"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip command-not-found virtualenv virtualenvwrapper aws docker vagrant)
+plugins=(git pip command-not-found virtualenv virtualenvwrapper tmux aws docker vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,6 +90,14 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# ruby rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

@@ -63,6 +63,14 @@ sudo update-alternatives --config editor
 choose vim.basic
 ??
 
+
+# direnv
+```
+git clone https://github.com/zimbatm/direnv
+cd direnv
+make install
+```
+
 Use:
 ------
 Add new plugins to pathogen
