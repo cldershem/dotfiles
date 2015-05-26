@@ -67,3 +67,6 @@
 [submodule "direnv"]
 	path = direnv
 	url = https://github.com/zimbatm/direnv
+[submodule "vim/bundle/vim-wakatime"]
+	path = vim/bundle/vim-wakatime
+	url = git://github.com/wakatime/vim-wakatime.git

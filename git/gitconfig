@@ -22,6 +22,6 @@
     br = branch
     co = checkout
 [diff]
-	tool = meld
+	tool = vimdiff
 [merge]
 	tool = meld
