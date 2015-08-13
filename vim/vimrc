@@ -9,12 +9,17 @@ filetype plugin on
 
 " something for python comments
 autocmd FileType python set commentstring=#\ %s
+autocmd FileType htmljinja set commentstring={#\ %s
 
 " fixes colors for dark background
 set background=dark
 
 " leader
 let mapleader=","
+
+" case insensitive search
+set ignorecase
+set smartcase
 
 " switch between buffers
 nnoremap <leader><leader> <c-^
@@ -87,6 +92,10 @@ let g:syntastic_python_checkers=["flake8"]
 let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_javascript_checkers=["jshint"]
+
+" React workaround
+" let g:syntastic_javascript_checkers=["eslint"]
+let g:jsx_ext_required = 0
 
 " vim-less support
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
@@ -187,8 +196,10 @@ endif
 " set mouse=a
 " set mouse to work in all but insert mode
 set mouse=nvc
-if exists('$TMUX')  " Support resizing in tmux
-    set ttymouse=xterm2
+if !has('nvim')
+    if exists('$TMUX')  " Support resizing in tmux
+        set ttymouse=xterm2
+    endif
 endif
 
 " reload files when changed on disk, i.e. via `git checkout`

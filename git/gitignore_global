@@ -2,6 +2,10 @@
 # misc #
 ########
 secrets.py
+tmp/
+!tmp/.gitignore
+.vagrant
+.venv
 
 ########
 # java #
