@@ -43,6 +43,7 @@ Installation:
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive
     ./install.sh --clang-completer
+    # or ./install.py  -- changed in recent version
 
     wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
     ```
