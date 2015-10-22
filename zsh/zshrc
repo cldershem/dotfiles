@@ -103,6 +103,10 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export PATH="/opt:$PATH"
 
+# GoPath
+export GOPATH=$HOME/Dev/GoLang
+export PATH=$GOPATH/bin:$PATH
+
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -110,6 +114,10 @@ eval "$(direnv hook zsh)"
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+# pebble
+# export PATH=/opt/pebble-dev/PebbleSDK-3.4/bin:$PATH
+export PATH="$HOME/pebble-dev/PebbleSDK-3.4/bin:$PATH"
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
