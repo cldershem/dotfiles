@@ -76,3 +76,6 @@
 [submodule "vim/bundle/ternjs"]
 	path = vim/bundle/ternjs
 	url = git@github.com:marijnh/tern_for_vim.git
+[submodule "vim/bundle/vim-swift"]
+	path = vim/bundle/vim-swift
+	url = git@github.com:kballard/vim-swift.git
