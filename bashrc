@@ -109,3 +109,6 @@ umask 022
 
 #tmux
 alias tmux='tmux -2'
+
+#fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

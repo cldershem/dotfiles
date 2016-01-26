@@ -3,6 +3,10 @@ execute pathogen#infect()
 " call pathogen#runtime_append_all_bundles()
 " call pathogen#helptags()
 
+" ycm virtualenv fix
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
+
 " supposedly changes stuff based on filetype
 filetype on
 filetype plugin on
@@ -88,10 +92,14 @@ autocmd BufWinEnter .* silent loadview
 " run flake8 (pep8 + pyflakes) on save
 " autocmd BufWritePost *.py call Flake8()
 let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers=["flake8"]
+" let g:syntastic_python_checkers=["flake8"]
+let g:syntastic_python_checkers=["pylint"]
 let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_javascript_checkers=["jshint"]
+
+" python 3
+" let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
 " React workaround
 " let g:syntastic_javascript_checkers=["eslint"]
@@ -242,3 +250,6 @@ let g:snips_github="github.com/cldershem"
 
 " ycm: turn off question for clang compile flags
 let g:ycm_confirm_extra_conf = 0
+
+" fzf
+set rtp+=~/.fzf

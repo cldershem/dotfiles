@@ -79,3 +79,9 @@
 [submodule "vim/bundle/vim-swift"]
 	path = vim/bundle/vim-swift
 	url = git@github.com:kballard/vim-swift.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "vim/bundle/python-syntax"]
+	path = vim/bundle/python-syntax
+	url = git@github.com:hdima/python-syntax.git
