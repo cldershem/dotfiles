@@ -1,7 +1,31 @@
-" pathogen (plugins in folders)
-execute pathogen#infect()
-" call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
+" vim plug
+call plug#begin('~/.vim/bundle')
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2.7 ./install.py' }
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/syntastic'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-sensible'
+Plug 'Rykka/riv.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'alvan/vim-closetag'
+Plug 'honza/vim-snippets'
+Plug 'hdima/python-syntax'
+Plug 'fatih/vim-go'
+Plug 'keith/swift.vim'
+Plug 'tpope/vim-unimpaired'
+
+call plug#end()
 
 " ycm virtualenv fix
 let g:python_host_prog = '/usr/bin/python'
@@ -57,7 +81,7 @@ let g:NERDTreeIgnore = ['\.pyc$']
 " closetag
 " :au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 :let g:closetag_html_style=1
-:source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+:source ~/.vim/bundle/vim-closetag/plugin/closetag.vim
 
 " escape key
 :imap jj <Esc>
@@ -93,7 +117,7 @@ autocmd BufWinEnter .* silent loadview
 " autocmd BufWritePost *.py call Flake8()
 let g:syntastic_check_on_open=1
 " let g:syntastic_python_checkers=["flake8"]
-let g:syntastic_python_checkers=["pylint"]
+let g:syntastic_python_checkers=["pep8"] " pylint, flake8
 let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_javascript_checkers=["jshint"]
