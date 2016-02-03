@@ -99,6 +99,14 @@ git rm --cached ~/.vim/bundle/plugin
 ```
 or better yet just rm the plugin and add it properly next time
 
+# [VIM-Plug](https://github.com/junegunn/vim-plug)
+```
+>>> curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+>>>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+>>> nvim ~/.vimrc
+>>>>>:PlugInstall
+```
+
 
 References
 ------------
