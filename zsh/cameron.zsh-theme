@@ -1,6 +1,9 @@
 # based on intheloop by James Smith (http://loopj.com)
 # A multiline prompt with username, hostname, full path, return status, git branch, git dirty status, git remote status
 
+autoload -U colors && colors
+
+
 # color vars
 local my_pink="$FG[217]"
 local my_green="$FG[034]"
@@ -27,6 +30,7 @@ local user_host=\
 "${my_pink}@${reset_color}"\
 "${my_green}%m%{$reset_color%}%{$fg_bold[grey]%}]%{$reset_color%}"
 local current_dir="%{$fg_bold[blue]%}%11c%{$reset_color%}"
+# local current_dir="%{$fg_bold[blue]%}%~%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="${my_grey}(${my_pink}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -38,8 +42,14 @@ ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="${my_yellow}↕%{$reset_color%}"
 MODE_INDICATOR="--NORMAL--"
 
 PROMPT='
-${pipe_top}${user_host} ${current_dir} $(git_prompt_info) $(git_remote_status)
-${pipe_bottom}${prompt_indicator} '
+$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py left) $(git_prompt_info) $(git_remote_status)
+$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py bottom)'
 
-# RPROMPT='${return_status} $(vi_mode_prompt_info) $(venv_info)'
-RPROMPT='${return_status} $(venv_info)'
+RPROMPT='$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py right)'
+
+# PROMPT='
+# ${pipe_top}${user_host} ${current_dir} $(git_prompt_info) $(git_remote_status)
+# ${pipe_bottom}${prompt_indicator} '
+
+# # RPROMPT='${return_status} $(vi_mode_prompt_info) $(venv_info)'
+# RPROMPT='${return_status} $(venv_info)'
