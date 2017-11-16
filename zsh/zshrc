@@ -147,7 +147,9 @@ compinit
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # fzf
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # remove duplicates from PATH
 typeset -U PATH
@@ -156,3 +158,13 @@ typeset -U PATH
 
 # export PYQTDESIGNERPATH=/home/cldershem/Desktop/pyFlyTrouble/PiezoImageAnalysis/PiezoImageAnalysis/qt_ui/
 alias xclippy='xclip -sel clip <'
+
+# npm
+export PATH=$PATH:~/.npm/bin
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
