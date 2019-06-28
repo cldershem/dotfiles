@@ -1,6 +1,6 @@
 [user]
 	name = Cameron Dershem
-	email = cldershem@gmail.com
+	email = cameron@pinkhatbeard.com
 [credential]
 	helper = cache
 [color]
@@ -16,6 +16,7 @@
 	editor = vim
 [core]
 	excludesfile = /home/cldershem/.dotfiles/git/gitignore_global
+	autocrlf = input
 [alias]
     st = status -sb
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -25,3 +26,5 @@
 	tool = vimdiff
 [merge]
 	tool = meld
+[pager]
+	branch = false

@@ -49,7 +49,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip command-not-found virtualenv virtualenvwrapper tmux docker vagrant taskwarrior rust cargo)
+plugins=(git pip command-not-found virtualenv virtualenvwrapper tmux docker vagrant taskwarrior rust cargo dotenv zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -162,9 +162,16 @@ alias xclippy='xclip -sel clip <'
 # npm
 export PATH=$PATH:~/.npm/bin
 
+# snaps
+export PATH=$PATH:/snap/bin
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cldershem/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+# annoying auto correct of 'cargo test'
+# https://superuser.com/questions/439209/how-to-partially-disable-the-zshs-autocorrect
+# alias cargo='nocorrect cargo'

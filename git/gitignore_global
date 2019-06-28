@@ -8,6 +8,7 @@ tmp/
 .venv
 .cache
 .vscode
+.vim
 
 ########
 # rust #
