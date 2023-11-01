@@ -1,0 +1,23 @@
+{
+    "diagnostic.virtualText": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "dart",
+        "css",
+        "markdown",
+        "javascript",
+        "typescript",
+        "json",
+        "python"
+    ],
+    "coc.preferences.willSaveHandlerTimeout": 5000,
+    "flutter.lsp.initialization.closingLabels": true,
+    "rust-analyzer.procMacro.enable": true,
+    "svelte.enable-ts-plugin": true,
+    "python.pythonPath": "python3",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/cldershem/.virtualenvs/vim_black/bin/black",
+    "python.formatting.blackArgs": [
+        "--preview"
+
+    ]
+}
