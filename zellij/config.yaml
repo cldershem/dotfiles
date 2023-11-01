@@ -1,0 +1,10 @@
+default_mode: locked
+keybinds:
+  locked:
+    - action: [SwitchToMode: Normal,]
+      key: [Ctrl: 'a',]
+  normal:
+    - action: [Write: [2,], SwitchToMode: Locked]
+      key: [Char: 'a']
+    - action: [SwitchToMode: Locked,]
+      key: [Ctrl: 'a', Char: ' ', Char: "\n"]

@@ -56,7 +56,7 @@ def user_hostname():
     else:
         user = color(host_color, os.environ.get('USER'))
 
-    if socket.gethostname() == 'cldershem-xps':
+    if socket.gethostname() == 'cldershem-xps' or socket.gethostname() == 'cldershem-xps13':
         house = '\N{HOUSE WITH GARDEN}'
         # host = color(host_color, 'home')
         host = color(host_color, house)

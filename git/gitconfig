@@ -7,13 +7,14 @@
 	ui = auto
 [push]
 	default = simple
+	autoSetupRemote = true
 [cola]
 	fontdiff = Ubuntu Mono,10,-1,5,50,0,0,0,0,0
 	tabwidth = 4
 	textwidth = 80
 	linebreak = false
 [gui]
-	editor = vim
+	editor = vi
 [core]
 	excludesfile = /home/cldershem/.dotfiles/git/gitignore_global
 	autocrlf = input
@@ -28,3 +29,9 @@
 	tool = meld
 [pager]
 	branch = false
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com

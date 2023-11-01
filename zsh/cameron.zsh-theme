@@ -42,10 +42,10 @@ ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="${my_yellow}↕%{$reset_color%}"
 MODE_INDICATOR="--NORMAL--"
 
 PROMPT='
-$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py left) $(git_prompt_info) $(git_remote_status)
-$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py bottom)'
+$(/usr/bin/python3 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py left) $(git_prompt_info) $(git_remote_status)
+$(/usr/bin/python3 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py bottom)'
 
-RPROMPT='$(/usr/bin/python3.5 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py right)'
+RPROMPT='$(/usr/bin/python3 /home/cldershem/.dotfiles/zsh/cameron.zsh-theme.py right)'
 
 # PROMPT='
 # ${pipe_top}${user_host} ${current_dir} $(git_prompt_info) $(git_remote_status)

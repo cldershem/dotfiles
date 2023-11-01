@@ -9,6 +9,7 @@ tmp/
 .cache
 .vscode
 .vim
+.idea
 
 ########
 # rust #
@@ -50,7 +51,7 @@ build/
 develop-eggs/
 dist/
 eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
@@ -201,6 +202,7 @@ Thumbs.db
 
 # direnv
 .envrc
+.env
 
 #################
 # javascript js #
@@ -208,3 +210,5 @@ Thumbs.db
 node_modules
 jspm_packages
 .tern-port
+
+.rgignore
